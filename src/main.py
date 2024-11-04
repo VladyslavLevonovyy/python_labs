@@ -34,10 +34,10 @@ class Ticket:
         self.__days_travel = (self.__days_travel - days)
 
     def __str__(self):
-        return (f"Ticket to {self.__country}, for {self.__duration} days, "
-                f"for {self.__price} USD, {self.seats} seats, {
-                    self.plane_type} class, "
-                f"{self.__days_travel} days until expiry")
+       return (f"Ticket to {self.__country}, for {self.__duration} days, "
+        f"for {self.__price} USD, {self.seats} seats, "
+        f"{self.plane_type} class.")
+
 
     def __repr__(self):
         return (f"Ticket('{self.__country}', {self.__duration}, {self.__price}, "
@@ -60,11 +60,11 @@ def get_nearest_ticket(ticket_list):
 
 
 def main():
-    Ticket1 = Ticket("Egypt", 20, 2000, days_travel=5)
-    Ticket2 = Ticket("Turkey", 15, 1500, days_travel=10)
-    Ticket3 = Ticket("Spain", 7, 1000, days_travel=13)
+    ticket_1 = Ticket("Egypt", 20, 2000, days_travel=5)
+    ticket_2 = Ticket("Turkey", 15, 1500, days_travel=10)
+    ticket_3 = Ticket("Spain", 7, 1000, days_travel=13)
 
-    tickets = [Ticket1, Ticket2, Ticket3]
+    tickets = [ticket_1, ticket_2, ticket_3]
 
     nearest_ticket = get_nearest_ticket(tickets)
     print("\nNearest tickets:")
